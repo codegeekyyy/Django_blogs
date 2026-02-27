@@ -221,3 +221,6 @@ __marimo__/
 
 # End of https://www.toptal.com/developers/gitignore/api/django
 SimplyCodes
+
+# Large binary files
+static/images/Antigravity.exe
