@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'assign',
     'crispy_forms',
     'crispy_bootstrap4',
+    'dashboard',
 ]
 
 MIDDLEWARE = [
