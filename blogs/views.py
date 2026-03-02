@@ -1,7 +1,9 @@
 from django.shortcuts import render, get_object_or_404, redirect
 from django.http import HttpResponse
-from .models import Blog, Category
+from .models import Blog, Category, Comment
 from django.db.models import Q
+
+from .forms import CommentForm
 
 # Create your views here.
 def posts_by_category(request, category_id):
@@ -15,23 +17,45 @@ def posts_by_category(request, category_id):
     #     # redirect to home page
     #     return render(request, 'home.html')
     category =  get_object_or_404(Category, id=category_id)
+    # comments
+    comments = Comment.objects.filter(blog_id=category_id)
+    print(comments)
     # use get_object_or_404 when you want to show 404 error page if the category does not exist
   
     context = {
         'posts': posts,
         'category': category,
         'categories': Category.objects.all(),
+        'comments': comments,
     }
     return render(request, 'posts_by_category.html', context)
 
 
 def post_detail(request, slug):
-  single_blog = get_object_or_404(Blog, slug=slug, status="Published")
-  context = {
-    'single_blog': single_blog,
-    'categories': Category.objects.all(),
-  }
-  return render(request, 'post_detail.html', context)
+    single_blog = get_object_or_404(Blog, slug=slug, status="Published")
+    
+    if request.method == 'POST':
+        form = CommentForm(request.POST)
+        if form.is_valid():
+            comment = form.save(commit=False)
+            comment.user = request.user
+            comment.blog = single_blog
+            comment.save()
+            return redirect('post_detail', slug=slug)
+    
+    # Comments
+    comments = Comment.objects.filter(blog=single_blog).order_by('-created_at')
+    comment_count = comments.count()
+    form = CommentForm()
+
+    context = {
+        'single_blog': single_blog,
+        'categories': Category.objects.all(),
+        'comments': comments,
+        'comment_count': comment_count,
+        'form': form,
+    }
+    return render(request, 'post_detail.html', context)
 
 
 
@@ -44,3 +68,5 @@ def search(request):
     'categories': Category.objects.all(),
   }
   return render(request, 'search.html', context)
+
+
