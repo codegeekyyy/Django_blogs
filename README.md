@@ -1,7 +1,7 @@
 <div style="font-family: Arial, sans-serif; line-height:1.6;">
 
 <h1 style="color:#2c3e50;">🚀 Django Blog Project</h1>
-<h3 style="color:#555;">By Tech With Harshdeep Singh</h3>
+<h3 style="color:#555;">By Harshdeep Singh</h3>
 
 <hr style="border:1px solid #ddd;">
 
@@ -81,7 +81,7 @@ python manage.py runserver
 <hr style="border:1px solid #ddd;">
 
 <p style="text-align:center; color:#777;">
-© 2026 Tech With Harshdeep Singh — Premium Django Blogging System
+© 2026Harshdeep Singh — Premium Django Blogging System
 </p>
 
 </div>
