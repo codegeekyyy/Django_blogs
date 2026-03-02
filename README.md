@@ -1,13 +1,13 @@
 <div style="font-family: Arial, sans-serif; line-height:1.6;">
 
-<h1 style="color:#2c3e50;">🚀 Django Blog Project — Premium Course</h1>
-<h3 style="color:#555;">By Tech With Rathan</h3>
+<h1 style="color:#2c3e50;">🚀 Django Blog Project</h1>
+<h3 style="color:#555;">By Tech With Harshdeep Singh</h3>
 
 <hr style="border:1px solid #ddd;">
 
 <h2 style="color:#34495e;">👋 Welcome</h2>
 <p>
-This repository contains the source code for the <strong>Django Blogging System Premium Course</strong>.
+This repository contains the source code for the <strong>Django Blogging Systemstrong>.
 It is a real-world, feature-rich blogging platform built to teach practical Django development —
 from models and templates to authentication, dashboards, permissions, and deployment.
 </p>
@@ -75,12 +75,13 @@ python manage.py runserver
 <li>Configure <code>ALLOWED_HOSTS</code></li>
 <li>Setup static & media files</li>
 <li>Use environment variables for secrets</li>
+<li>Demo Link - https://deepcode22.pythonanywhere.com/</li>
 </ul>
 
 <hr style="border:1px solid #ddd;">
 
 <p style="text-align:center; color:#777;">
-© 2026 Tech With Rathan — Premium Django Blogging System
+© 2026 Tech With Harshdeep Singh — Premium Django Blogging System
 </p>
 
 </div>
