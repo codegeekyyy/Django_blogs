@@ -89,7 +89,7 @@ You can quickly run the blogging system using the pre-built Docker image.
 
 <ul>
 <li>📦 Image Name: <code>deepcode22/blog</code></li>
-<li>🌐 Docker Hub: https://hub.docker.com/r/deepcode22/blog</li>
+<li>🌐 Docker Hub: https://hub.docker.com/repository/docker/deepcode22/blog/general</li>
 </ul>
 
 <h3 style="color:#555;">Run using Docker</h3>
