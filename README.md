@@ -78,6 +78,35 @@ python manage.py runserver
 <li>Demo Link - https://deepcode22.pythonanywhere.com/</li>
 </ul>
 
+<hr style="border:1px solid #eee;">
+
+<h2 style="color:#34495e;">🐳 Docker Image</h2>
+
+<p>
+This project is also containerized and available on <strong>Docker Hub</strong>.
+You can quickly run the blogging system using the pre-built Docker image.
+</p>
+
+<ul>
+<li>📦 Image Name: <code>deepcode22/blog</code></li>
+<li>🌐 Docker Hub: https://hub.docker.com/r/deepcode22/blog</li>
+</ul>
+
+<h3 style="color:#555;">Run using Docker</h3>
+
+<pre style="background:#f4f4f4; padding:10px; border-radius:5px;">
+docker pull deepcode22/blog
+docker run -p 8000:8000 deepcode22/blog
+</pre>
+
+<p>
+After running the container, open:
+</p>
+
+<pre style="background:#f4f4f4; padding:10px; border-radius:5px;">
+http://127.0.0.1:8000
+</pre>
+
 <hr style="border:1px solid #ddd;">
 
 <p style="text-align:center; color:#777;">
